@@ -38,7 +38,7 @@ def mostrar_cabecera():
         st.markdown("<div class='header-text'>Aplicación de Encuesta</div>", unsafe_allow_html=True)
 
 # --- FUNCIONES DE DATOS ---
-FILE_PATH = r"C:\STREAMLIT\C03_Encuesta.csv"
+FILE_PATH = r"C03_Encuesta.csv"
 
 def load_data():
     if os.path.exists(FILE_PATH):
@@ -139,4 +139,5 @@ elif menu == "Analisis":
         fig_sun = px.sunburst(df, path=['PREG1', 'PREG4', 'PREG3'], values='PREG2')
         st.plotly_chart(fig_sun, use_container_width=True)
     else:
+
         st.warning("No hay datos para analizar.")
